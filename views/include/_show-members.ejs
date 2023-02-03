@@ -1,0 +1,21 @@
+<% for(var i = 0; i < members.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= members[i].membername %></td>
+        <td><%= members[i].memberjob %></td>
+        <td><%= members[i].memberministry %></td>
+        <td><%= members[i].memberposition %></td>
+        <td><%= members[i].memberaddress %></td>
+        <td><%= members[i].membercity %></td>
+        <td><%= members[i].memberphone %></td>
+        <% if(members[i].isActivate === 'true') { %>
+        <td style="color: rgb(0, 0, 139);">تم التفعيل</td>
+        <% } else { %>
+        <td>
+            <a href="/api-activateMember/<%= members[i].membertoken %>/<%= members[i].memberid %>" style="display: inline-block; color: rgb(0, 0, 139);" class="delete">
+                تفعيل
+            </a>
+        </td>
+        <% } %>
+    </tr>
+<% } %>

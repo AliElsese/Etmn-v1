@@ -1,0 +1,21 @@
+<% for(var i = 0; i < requests.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= requests[i].userName %></td>
+        <td><%= requests[i].userPhone %></td>
+        <td><%= requests[i].userAddress %></td>
+        <td><%= requests[i].userCity %></td>
+        <td><%= requests[i].userAge %></td>
+        <td><%= requests[i].requestDetails %></td>
+        <td><%= requests[i].ministry %></td>
+        <% if(requests[i].requeststatus === 'true') { %>
+        <td>تم التوجيه</td>
+        <% } else { %>
+        <td>
+            <a href="/update-request/<%= requests[i].requestid %>/<%= requests[i].ministry %>" style="display: inline-block; color: rgb(0, 0, 139);" class="delete">
+                توجيه
+            </a>
+        </td>
+        <% } %>
+    </tr>
+<% } %>

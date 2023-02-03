@@ -1,0 +1,53 @@
+<%- include('include/_header') %>
+
+<div class="container mt-5">
+    <div class="box m-5">
+        <div class="col-md-12 text text-center pt-5">
+            <div class="form-title">
+                <h2>توجيه الطلب</h2>
+                <div class="divider mb-2"></div>
+            </div>
+        </div>
+
+        <form action="/api-updateRequest" method="post">
+            
+            <div class="row">
+                <div class="col-md-12 text-right">
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                        <!-- Text input-->
+                        <div class="form-group col-md-8">
+                            <label class="control-label" for="membername">اسم العضو</label>  
+                            <input type="hidden" name="id" value="<%= id %>">
+                            <select id="member-name" name="membername" class="form-control">
+                                <% for(var i = 0; i < members.length; i++) { %>
+                                    <option value="<%= members[i].membername %>">
+                                        <%= members[i].membername %>
+                                    </option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                    </div>
+
+                    <div class="row mb-2 mt-3">
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <button type="submit" class="btn"> توجيه </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<%- include('include/_footer') %>

@@ -1,0 +1,89 @@
+@import url('fonts/fontawesome/css/fontawesome.min.css');
+@import url('fonts/fontawesome/css/all.min.css');
+
+body {
+    background-color: #eee;
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+.btn {
+	color: #ffffff;
+	background: #417cbc;
+	border: 1px solid #417cbc;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 10px 25px 8px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: #417cbc;
+	background-color: #ffffff;
+	border-color: #000;
+}
+
+a {
+    color: #ddd;
+    transition: all 0.3s ease 0s;
+    text-decoration:none;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #244072;
+    text-decoration:none;
+}
+
+a.active{
+    color: #244072;
+}
+
+.divider {
+    width: 70px;
+    height: 4px;
+    display: inline-block;
+    background: #244072;
+    border-top: 1px solid #244072;
+    border-bottom: 1px solid #244072;
+    margin-top: 0px;
+    position: relative;
+    top: -3px;
+}
+
+/*-------------------------- navbar --------------*/
+header {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 480px;
+}
+
+header img {
+    width: 250px;
+    height: 200px;
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    background: rgba(10, 24, 40, 0.2) none repeat scroll 0 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.box {
+    border-radius: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+	-moz-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+    -o-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+	box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)
+}

@@ -1,0 +1,64 @@
+<%- include('include/_header') %>
+
+<div class="container mt-5 mb-5 box">
+    <div class="col-md-12 text-center pt-4">
+        <h2 style="color: #111111;"> تسجيل الدخول </h3>
+        <div class="divider mb-4"></div>
+    </div>
+      
+    <% if(typeof message != 'undefined') { %>
+        <div class="col-md-12 text-center">
+            <h4 class="alert alert-danger mt-4">
+                <%= message %>
+            </h4>
+        </div>
+    <% } %>
+      
+    <div class="col-md-12 text-right">
+        <form action="/auth/login" method="POST">
+    
+            <div class="row mb-2">
+          
+                <div class="col-md-2 d-md-block"></div>
+        
+                <!-- Text input-->
+                <div class="form-group col-md-8">
+                    <label class="control-label" for="name">اسم المستخدم</label>  
+    
+                    <input id="name" name="name" placeholder="اسم المستخدم" class="form-control" type="text">
+                </div>
+        
+                <div class="col-md-2 d-md-block"></div>
+    
+            </div>
+    
+            <div class="row mb-2">
+          
+                <div class="col-md-2 d-md-block"></div>
+        
+                <!-- Text input-->
+                <div class="form-group col-md-8">
+                    <label class="control-label" for="password">كلمة السر</label>  
+    
+                    <input id="password" name="password" placeholder="كلمة السر" class="form-control" type="password">
+                </div>
+                
+        
+                <div class="col-md-2 d-md-block"></div>
+    
+            </div>
+          
+            <div class="row mb-2">
+                <div class="col-md-12 text-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn"> تسجيل الدخول </button>
+                    </div>
+                </div>
+            </div>
+    
+        </form>
+    
+    </div>
+</div>
+
+<%- include('include/_footer') %>

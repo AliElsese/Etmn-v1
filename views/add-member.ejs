@@ -1,0 +1,109 @@
+<%- include('include/_header') %>
+
+<div class="container mt-5">
+
+    <div class="box m-5">
+        <div class="row pt-5">
+            <% if(typeof message != 'undefined') { %>
+                <div class="col-md-12 text-center">
+                    <h4 class="alert alert-success">
+                        <%= message %>
+                    </h4>
+                </div>
+            <% } %>
+        </div>
+
+        <div class="col-md-12 text text-center pt-5">
+            <div class="form-title">
+                <h2>عضو جديد</h2>
+                <div class="divider mb-2"></div>
+            </div>
+        </div>
+
+        <form action="/api-addMember" method="post" id="add_product">
+              
+            <div class="row">
+                <div class="col-md-12 text-right">
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                        <!-- Text input-->
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="membername">اسمك</label>  
+                            <input type="hidden" name="id" value="">
+                            <input id="membername" name="membername" placeholder="اسمك" class="form-control" type="text" value="">
+                        </div>
+                        
+                        <!-- Text input-->
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="memberjob">الوظيفة</label>  
+                            
+                            <input id="memberjob" name="memberjob" placeholder="الوظيفة" class="form-control" type="text" value="">
+                        </div>
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="memberministry">الجهة التابع لها</label>  
+                            
+                            <input id="memberministry" name="memberministry" placeholder="الجهة" class="form-control" type="text" value="">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="memberposition">المكانة داخل الحزب</label>  
+                            
+                            <input id="memberposition" name="memberposition" placeholder="المكانة" class="form-control" type="text" value="">
+                        </div>
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <div class="col-md-2 d-md-block"></div>
+                        
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="memberphone">اسم المستخدم (رقم الهاتف)</label>  
+                            
+                            <input id="memberphone" name="memberphone" placeholder="رقم الهاتف" class="form-control" type="text" value="">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label" for="memberpassword">كلمة المرور</label>  
+                            
+                            <input id="memberpassword" name="memberpassword" placeholder="كلمة المرور" class="form-control" type="text" value="">
+                        </div>
+
+                        <div class="col-md-2 d-md-block"></div>
+
+                    </div>
+
+
+                    <div class="row mb-2 mt-3">
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <button type="submit" class="btn"> تسجيل </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+<%- include('include/_footer') %>

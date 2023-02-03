@@ -1,0 +1,48 @@
+<%- include('include/_header') %>
+
+<div class="content">
+    <div class="product-table m-5">
+
+        <div class="col-md-12 text-center mt-5 pt-5">
+            <h2>توجيه الطلبات</h2>
+            <div class="divider mt-2 mb-4"></div>
+        </div>
+
+        <% if(typeof message != 'undefined') { %>
+            <div class="col-md-12 text-center">
+                <h4 class="alert alert-success mt-4">
+                    <%= message %>
+                </h4>
+            </div>
+        <% } %>
+
+        <form action="/views/dashboard-requests" method="post">
+        
+            <table class="table table-striped table-bordered text-center mydatatable" style="width: 100%;">
+        
+                <thead style="background-color: #2f323a;color: #fff;">
+                    <tr>
+                        <th>رقم التسلسل</th>
+                        <th>الاسم</th>
+                        <th>رقم الهاتف</th>
+                        <th>العنوان</th>
+                        <th>المدينة</th>
+                        <th>السن</th>
+                        <th>تفاصيل الطلب</th>
+                        <th>الوزارة</th>
+                        <th>التحكم</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <%- include('include/_show-requests') %>
+                </tbody>
+
+            </table>
+
+        </form>
+
+    </div>
+</div>
+
+<%- include('include/_footer') %>
